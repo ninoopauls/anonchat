@@ -2,6 +2,19 @@
 const chatForm = document.querySelector('#chat-form');
 const chatBox = document.querySelector('#chat-box');
 
+
+// Get the query parameter value
+const urlParams = new URLSearchParams(window.location.search);
+const channel = urlParams.get('chan');
+
+// Set the value of the text box
+document.getElementById('channel').value = channel;
+
+
+
+
+
+
 // Listen for form submission
 chatForm.addEventListener('submit', (event) => {
   event.preventDefault();
